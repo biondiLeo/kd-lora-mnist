@@ -1,0 +1,16 @@
+# Core ML
+torch>=2.2.0
+torchvision>=0.17.0
+tqdm>=4.66.0
+
+# Data handling & utils
+numpy>=1.24.0
+pandas>=2.2.0
+
+# Plotting & notebook
+matplotlib>=3.8.0
+jupyter>=1.0.0
+ipykernel>=6.29.0
+
+# Optional but useful
+pyyaml>=6.0.1
