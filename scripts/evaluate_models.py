@@ -12,6 +12,7 @@ Pensato per essere:
 """
 
 from typing import Callable, Dict, Any, List, Optional
+from pathlib import Path
 import time
 import torch
 import torch.nn.functional as F
@@ -420,7 +421,9 @@ def evaluate_all_models(
     df = pd.DataFrame(rows)
 
     if save_csv_path is not None:
-        df.to_csv(save_csv_path, index=False)
+        save_path = Path(save_csv_path)
+        save_path.parent.mkdir(parents=True, exist_ok=True)  # <--- crea cartella se non esiste
+        df.to_csv(save_path, index=False)
 
     return df
 
